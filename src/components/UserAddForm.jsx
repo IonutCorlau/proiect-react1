@@ -24,10 +24,11 @@ class UserAddForm extends React.Component {
 
     render() {
         const {name, email, isGoldClient} = this.state;
+        console.log(this.props.validateForm)
 
         return (
             <form
-                className="user-add-form"
+                className="userAddForm"
                 onSubmit={(event) => this.props.submitAddForm(event, name, email, isGoldClient)}
             >
                 <h2>Adauga utilizatori:</h2>
@@ -50,8 +51,13 @@ class UserAddForm extends React.Component {
                     value="true"
                     onChange={(event) => this.updateIsGoldClient(event)}
                 />
-
-                <input type="submit" value="Introdu utilizatorul"/>
+                {
+                    this.props.validateForm === false 
+                        ? <p className="userAddForm--error">Va rugam sa introduceti un utilizator valid (Nume mai mare de 3 caractere si email valid)</p>
+                        : null
+                }
+            
+                <input className="regularButton" type="submit" value="Introdu utilizatorul"/>
             </form>
         )
     }

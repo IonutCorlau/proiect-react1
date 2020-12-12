@@ -1,0 +1,11 @@
+.userItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.userItem .userItem__data {
+  margin-right: 50px;
+  flex-basis: 50%;
+}
+
+

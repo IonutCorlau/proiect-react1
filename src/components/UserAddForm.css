@@ -2,11 +2,20 @@ h2 {
     font-style: italic;
 }
 
-.user-add-form {
+.userAddForm {
     display: flex;
     flex-direction: column;
+    flex-basis: 40%;
 }
 
-.user-add-form input {
-    max-width: 50%;
+.userAddForm .regularButton {
+    margin: 0 auto;
+}
+
+.userAddForm label {
+    margin-bottom: 10px;
+}
+
+.userAddForm--error {
+    color: red;
 }
